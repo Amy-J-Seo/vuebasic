@@ -5,7 +5,7 @@
         <button @click="getData">Click me</button>
          <button @click="setData">set me</button>
 
-         <select class="form-control" v-model="region">
+         <select class="form-control" v-model="region" @change="changeRegion">
              <option v-for="(d, i) in options" :key="i" :value="d.v">{{d.t}}</option>
          </select>
 
@@ -46,7 +46,9 @@ export default {
         setData(){
             this.input1 = "1234";
         },
-        
+        changeRegion(){
+            alert(this.region)
+        }
     },
     beforeCreate(){
             console.log('beforeCreate');
