@@ -8,6 +8,13 @@
          <select class="form-control" v-model="region">
              <option v-for="(d, i) in options" :key="i" :value="d.v">{{d.t}}</option>
          </select>
+
+         <table class="table table-bordered">
+             <tr v-for="(d,i) in options" :key="i">
+                 <td>{{d.v}}</td>
+                 <td>{{d.t}}</td>
+             </tr>
+         </table>
     </div>
 </template>
 
